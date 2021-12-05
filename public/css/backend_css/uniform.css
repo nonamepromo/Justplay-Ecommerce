@@ -454,7 +454,6 @@ Not advised to edit stuff below this line
 .uploader {
   display: -moz-inline-box;
   display: inline-block;
-  vertical-align: middle;
   zoom: 1;
   *display: inline;
 }

@@ -11,7 +11,7 @@ body {
 	overflow-x: hidden;
 	margin-top: -10px; font-family: 'Open Sans', sans-serif; font-size:15px; color: #0a0a0a;
 }
-a{color:white;}
+a{color:red;}
 a:hover, a:focus {
 	text-decoration: none; color:#28b779;
 }

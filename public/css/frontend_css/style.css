@@ -2836,6 +2836,7 @@ header .is-sticky .sticky .user-basket .dropdown-menu {
 	-o-transition: all 0.4s ease-in-out;
 	-ms-transition: all 0.4s ease-in-out;
 	transition: all 0.4s ease-in-out;
+    border-radius: 15px;
 }
 .shopping-cart .bootstrap-select .btn {
 	margin-top: 10px;
@@ -2859,8 +2860,9 @@ header .is-sticky .sticky .user-basket .dropdown-menu {
 	color: #2d3a4b;
 }
 .shopping-cart .cart-ship-info .grand-total {
-	border: 3px solid #ffe115;
+	border: 3px solid mediumseagreen;
 	padding: 15px 30px;
+    border-radius: 20px;
 }
 .shopping-cart .cart-ship-info .order-detail p {
 	font-weight: normal;
@@ -2906,10 +2908,11 @@ header .is-sticky .sticky .user-basket .dropdown-menu {
 	margin-left: 0px;
 }
 .shopping-cart .order-place {
-	border: 3px solid #ffe124;
+	border: 3px solid mediumseagreen;
 	padding: 30px;
 	display: inline-block;
 	width: 100%;
+    border-radius: 20px;
 }
 .shopping-cart .order-place h5 {
 	font-weight: bold;
@@ -2977,6 +2980,7 @@ header .is-sticky .sticky .user-basket .dropdown-menu {
 .shopping-cart .btn {
 	font-size: 14px;
 	padding: 0px 30px;
+    border-radius: 15px;
 }
 
 .small-cart .cart-ship-info form {
@@ -4372,6 +4376,7 @@ main {
 	letter-spacing: 0px;
 	background: #fff !important;
 	padding: 0 15px;
+    border-radius: 15px;
 }
 .bootstrap-select.btn-group .dropdown-toggle .filter-option {
 	color: #2d3a4b;

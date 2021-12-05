@@ -143,7 +143,7 @@
                             <!-- Overlay -->
                             <div class="overlay">
                                 <div class="position-center-center">
-                                    <div class="inn"><a href="{{ asset ('images/backend_images/products/large/'.$chunk->image) }}" data-lighter><i class="icon-eye"></i></a>
+                                    <div class="inn">
                                         <a href="{{ url('product/'.$chunk->id) }}"><i class="icon-magnifier"></i></a>
                                     </div>
                                 </div>

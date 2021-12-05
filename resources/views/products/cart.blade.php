@@ -126,10 +126,10 @@
                         <div class="col-sm-7">
                             <h6>COUPON</h6>
                             <form action="{{ url('cart/apply-coupon') }}" method="post">{{ csrf_field() }}
-                                <input type="text" name="coupon_code"  placeholder="ENTER YOUR CODE IF YOU HAVE ONE">
+                                <input type="text" name="coupon_code"  placeholder="INSERISCI IL TUO COUPON">
                                 <button type="submit" class="btn btn-small btn-dark">CHECK</button>
                             </form>
-                            <div class="coupn-btn"> <a href="{{ asset('/') }}" class="btn">continua a comprare</a>
+                            <div class="coupn-btn"> <a href="{{ asset('/') }}" class="btn">continua a fare acquisti</a>
                                 <a href="{{ url('/checkout') }}" class="btn">checkout</a> </div>
                         </div>
 
