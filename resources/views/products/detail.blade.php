@@ -32,7 +32,7 @@
                     <div class="row">
 
                         <!-- Popular Images Slider -->
-                        <div class="col-md-7">
+                        <div class="col-md-7" style="width: 50%">
 
                             <!-- Place somewhere in the <body> of your page -->
                             <div id="slider-shop" class="flexslider">
