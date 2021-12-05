@@ -1,0 +1,73 @@
+.passtrengthMeter{
+  position: relative;
+  width: 100%;
+}
+
+.passtrengthMeter > input{
+  width: 100%;
+  display: inline-block;
+  padding: 5px;
+  box-sizing: border-box;
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.passtrengthMeter > input:focus {
+    outline-width: 0;
+}
+
+.passtrengthMeter::after{
+  content: '';
+  height: 3px;
+  overflow: hidden;
+  width: 0%;
+  transition: width .5s;
+  position: absolute;
+  left: 0px;
+  bottom: -60px;
+}
+
+.passtrengthMeter.weak::after{
+  background-color: #EC644B;
+  width: 25%;
+}
+
+.passtrengthMeter.medium::after{
+  content: '';
+  background-color: #E87E04;
+  width: 50%;
+}
+
+.passtrengthMeter.strong::after{
+  content: '';
+  background-color: #EFBF17;
+  width: 75%;
+}
+
+.passtrengthMeter.very-strong::after{
+  content: '';
+  background-color: #42A72A;
+  width: 100%;
+}
+
+.passtrengthMeter .showPassword{
+  position: absolute;
+  width: 20px;
+  top: calc(50% + 20px);
+  right: 10px;
+}
+
+.passtrengthMeter .showPassword.active{
+  opacity: .5;
+}
+
+.passtrengthMeter .showPassword img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.passtrengthMeter .showPassword:hover{
+  cursor: pointer;
+}
