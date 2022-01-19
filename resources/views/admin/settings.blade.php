@@ -13,7 +13,7 @@
             </div>
             <div id="breadcrumb"> <a href="{{url ('admin/dashboard')}}" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a>
                 <a href="" class="current">Impostazioni</a> </div>
-            <h1>Impostazioni Admin</h1>
+
             @if(Session::has('flash_message_error'))
                 <div class="alert alert-error alert-block">
                     <button type="button" class="close" data-dismiss="alert">×</button>
