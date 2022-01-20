@@ -536,6 +536,11 @@ class ProductsController extends Controller
                 $shipping->save();
             }
 
+            $billincodeCount = DB::table('pincodes')->where('pincode',$data['billing_pincode'])->count();
+            if($billincodeCount==0){
+                return redirect()->back()->with('flash_message_error','La tua posizione non è disponibile per la fatturazione!');
+            }
+
             $pincodeCount = DB::table('pincodes')->where('pincode',$data['shipping_pincode'])->count();
             if($pincodeCount==0){
                 return redirect()->back()->with('flash_message_error','La tua posizione non è disponibile per la spedizione!');
@@ -558,16 +563,13 @@ class ProductsController extends Controller
             $productDetails = Product::where('id',$product->product_id)->first();
             $userCart[$key]->image = $productDetails->image;
         }
-        $codpincodeCount = DB::table('cod_pincodes')->where('pincode',$shippingDetails->pincode)->count();
-        $prepaidpincodeCount = DB::table('prepaid_pincodes')->where('pincode',$shippingDetails->pincode)->count();
 
         //Shipping Charges
         $shippingCharges = Product::getShippingCharges($shippingDetails->country);
         Session::put('ShippingCharges',$shippingCharges);
 
         $meta_title = "Riepilogo Ordine | Justplay";
-        return view('products.order_review')->with(compact('userDetails','shippingDetails','userCart','meta_title',
-            'codpincodeCount','prepaidpincodeCount','shippingCharges'));
+        return view('products.order_review')->with(compact('userDetails','shippingDetails','userCart','meta_title','shippingCharges'));
     }
 
     public function placeOrder(Request $request){

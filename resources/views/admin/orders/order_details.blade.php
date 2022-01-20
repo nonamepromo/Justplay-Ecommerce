@@ -179,16 +179,16 @@
                         <th>Product Qty</th>
                     </tr>
                     </thead>
-                    <tbody>
                     @foreach($orderDetails->orders as $pro)
-                        <tr>
-                            <td>{{$pro->product_code}}</td>
-                            <td>{{$pro->product_name}}</td>
-                            <td>{{$pro->product_price}}</td>
-                            <td>{{$pro->product_qty}}</td>
-                        </tr>
-                    @endforeach
+                        <tbody>
+                            <tr>
+                                <td>{{$pro->product_code}}</td>
+                                <td>{{$pro->product_name}}</td>
+                                <td>{{$pro->product_price}}</td>
+                                <td>{{$pro->product_qty}}</td>
+                            </tr>
                     </tbody>
+                    @endforeach
                 </table>
             </div>
         </div>

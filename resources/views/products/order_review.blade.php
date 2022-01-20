@@ -143,22 +143,18 @@
                                                     <label><strong>SELEZIONA METODO DI PAGAMENTO:</strong></label>
                                                     <li>
                                                 </li>
-                                                @if($codpincodeCount>0)
                                                 <li>
                                                     <div class="radio">
                                                         <input type="radio" name="payment_method" id="COD" value="COD" checked>
                                                         <label for="COD"> CARTA DI CREDITO </label>
                                                     </div>
                                                 </li>
-                                                @endif
-                                                @if($prepaidpincodeCount>0)
                                                 <li>
                                                     <div class="radio">
                                                         <input type="radio" name="payment_method" id="Paypal" value="Paypal">
                                                         <label for="Paypal"> PAYPAL </label>
                                                     </div>
                                                 </li>
-                                                @endif
                                             </ul>
                                             <button class="btn  btn-dark pull-right margin-top-30" type="submit"
                                                onclick=" return selectPaymentMethod(); " >ACQUISTA</button> </div>

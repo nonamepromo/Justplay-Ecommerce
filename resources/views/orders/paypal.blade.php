@@ -21,7 +21,7 @@
                         <b>{{Session::get('grand_total')}}€</b></p>
                     <p>Per confermare il tuo pagamento clicca sul bottone sottostante</p>
                     <!-- Video 84 e 85 -->
-                    <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+                    <form action="https://www.paypal.com/it/home" method="post">
                         <input type="hidden" name="cmd" value="_xclick">
                         <input type="hidden" name="business" value="sb-2lmdk4085740@business.example.com">
                         <input type="hidden" name="item_name" value="{{Session::get('order_id')}}">
