@@ -66,6 +66,9 @@ Route::get('confirm/{code}','UsersController@confirmAccount');
 //Search Products
 Route::post('/search-products','ProductsController@searchProducts');
 
+//PEGI Products
+Route::post('/search-products-pegi','ProductsController@searchProductsPegi');
+
 //Check If User already exists
 Route::match(['GET','POST'],'/check-email','UsersController@checkEmail');
 

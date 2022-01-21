@@ -62,6 +62,96 @@ $cartCount = Product::cartCount();
                             </ul>
                         </li>
 
+                        <li class="dropdown"> <a href="#." class="dropdown-toggle" data-toggle="dropdown">Categorie</a>
+                            <ul class="dropdown-menu">
+                                <form action="{{url ('/search-products')}}" method="post">{{csrf_field()}}
+                                    <input hidden type="search" placeholder="Search Product" name="product" value="Avventura">
+                                    <button style="background: transparent; border: none" type="submit">
+                                        <li> <a>Avventura
+                                            </a>
+                                        </li>
+                                        </button>
+                                </form>
+                                <form action="{{url ('/search-products')}}" method="post">{{csrf_field()}}
+                                    <input hidden type="search" placeholder="Search Product" name="product" value="Azione">
+                                    <button style="background: transparent; border: none" type="submit">
+                                        <li> <a>Azione
+                                            </a>
+                                        </li>
+                                    </button>
+                                </form>
+                                <form action="{{url ('/search-products')}}" method="post">{{csrf_field()}}
+                                    <input hidden type="search" placeholder="Search Product" name="product" value="Sport">
+                                    <button style="background: transparent; border: none" type="submit">
+                                        <li> <a>Sport
+                                            </a>
+                                        </li>
+                                    </button>
+                                </form>
+                                <form action="{{url ('/search-products')}}" method="post">{{csrf_field()}}
+                                    <input hidden type="search" placeholder="Search Product" name="product" value="Sparatutto">
+                                    <button style="background: transparent; border: none" type="submit">
+                                        <li> <a>Sparatutto
+                                            </a>
+                                        </li>
+                                    </button>
+                                </form>
+                                <form action="{{url ('/search-products')}}" method="post">{{csrf_field()}}
+                                    <input hidden type="search" placeholder="Search Product" name="product" value="Simulazione">
+                                    <button style="background: transparent; border: none" type="submit">
+                                        <li> <a>Simulazione
+                                            </a>
+                                        </li>
+                                    </button>
+                                </form>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown"> <a href="#." class="dropdown-toggle" data-toggle="dropdown">PEGI</a>
+                            <ul class="dropdown-menu">
+                                <form action="{{url ('/search-products-pegi')}}" method="post">{{csrf_field()}}
+                                    <input hidden type="search" placeholder="Search Product" name="product" value="3">
+                                    <button style="background: transparent; border: none" type="submit">
+                                        <li> <a>3
+                                            </a>
+                                        </li>
+                                    </button>
+                                </form>
+                                <form action="{{url ('/search-products-pegi')}}" method="post">{{csrf_field()}}
+                                    <input hidden type="search" placeholder="Search Product" name="product" value="7">
+                                    <button style="background: transparent; border: none" type="submit">
+                                        <li> <a>7
+                                            </a>
+                                        </li>
+                                    </button>
+                                </form>
+                                <form action="{{url ('/search-products-pegi')}}" method="post">{{csrf_field()}}
+                                    <input hidden type="search" placeholder="Search Product" name="product" value="12">
+                                    <button style="background: transparent; border: none" type="submit">
+                                        <li> <a>12
+                                            </a>
+                                        </li>
+                                    </button>
+                                </form>
+                                <form action="{{url ('/search-products-pegi')}}" method="post">{{csrf_field()}}
+                                    <input hidden type="search" placeholder="Search Product" name="product" value="16">
+                                    <button style="background: transparent; border: none" type="submit">
+                                        <li> <a>16
+                                            </a>
+                                        </li>
+                                    </button>
+                                </form>
+                                <form action="{{url ('/search-products-pegi')}}" method="post">{{csrf_field()}}
+                                    <input hidden type="search" placeholder="Search Product" name="product" value="18">
+                                    <button style="background: transparent; border: none" type="submit">
+                                        <li> <a>18
+                                            </a>
+                                        </li>
+                                    </button>
+                                </form>
+                            </ul>
+                        </li>
+
                         <li class="dropdown"> <a href="#." class="dropdown-toggle" data-toggle="dropdown">Console</a>
                             <ul class="dropdown-menu">
                                 @foreach($categories as $cat)

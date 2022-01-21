@@ -42,6 +42,9 @@
                                     <th>Platform Name</th>
                                     <th>Videogame Name</th>
                                     <th>Videogame Code</th>
+                                    <th>Videogame Brand</th>
+                                    <th>Videogame Genre</th>
+                                    <th>Videogame Pegi</th>
                                     <th>Price</th>
                                     <th>Image</th>
                                     <th>Stock</th>
@@ -57,6 +60,9 @@
                                         <td>{{ $product->category_name }}</td>
                                         <td>{{ $product->product_name }}</td>
                                         <td>{{ $product->product_code }}
+                                        <td>{{ $product->product_brand }}
+                                        <td>{{ $product->product_genre }}
+                                        <td>{{ $product->product_pegi }}
                                         <td>{{ $product->price }}</td>
                                         <td>
                                           @if(!empty($product->image))

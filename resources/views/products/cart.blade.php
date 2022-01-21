@@ -120,6 +120,7 @@
 
                 <!-- SHOPPING INFORMATION -->
                 <div class="cart-ship-info margin-top-0">
+
                     <div class="row">
 
                         <!-- DISCOUNT CODE -->

@@ -52,7 +52,11 @@
 
                                 <h4>{{ $productDetails->product_name }}</h4>
                                 <br>
-                                <span><i>Codice Prodotto:</i> <b>{{$productDetails->product_code}}</b></span>
+                                <span><i>Codice Prodotto:</i> <b>{{$productDetails->product_code}}</b></span><br>
+                                <span><i>Casa produttrice:</i> <b>{{$productDetails->product_brand}}</b></span><br>
+                                <span><i>Genere prodotto:</i> <b>{{$productDetails->product_genre}}</b></span><br>
+                                <span><i>PEGI:</i> <b>{{$productDetails->product_pegi}}</b></span><br>
+
                                 <span class="price">
                                     <?php $getCurrencyRates = Product::getCurrencyRates($productDetails->price);?>
                                     <h3>{{ $productDetails->price }} €</h3>
@@ -103,7 +107,7 @@
                                     </li>
                                 </ul>
 <br>
-                                <b>Controlla se spediamo nella tua città</b>
+                               <!-- <b>Controlla se spediamo nella tua città</b>
                                 <br>
                                 <input style="border-radius: 5px" type="text" name="pincode" id="chkPincode" placeholder=" Inserisci il tuo CAP">
                                 <button type="button" onclick="return checkPincode();"
@@ -111,7 +115,7 @@
                                         ;outline: none">✓</button>
                                 <p></p>
                                 <b id="pincodeResponse"></b>
-                                <p></p>
+                                <p></p> -->
 <br>
 <br>
 <br>

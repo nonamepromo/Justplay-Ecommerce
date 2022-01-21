@@ -38,6 +38,11 @@ class ProductsController extends Controller
             $product->category_id = $data['category_id'];
             $product->product_name = $data['product_name'];
             $product->product_code = $data['product_code'];
+
+            $product->product_brand = $data['product_brand'];
+            $product->product_genre = $data['product_genre'];
+            $product->product_pegi = $data['product_pegi'];
+
             if(!empty($data['description'])){
                 $product->description = $data['description'];
             }else{
@@ -122,7 +127,8 @@ class ProductsController extends Controller
 
             Product::where(['id'=>$id])->update(['category_id'=>$data['category_id'],
                 'product_name'=>$data['product_name'],'product_code'=>$data['product_code'],
-                'description'=>$data['description'],
+                'product_brand'=>$data['product_brand'],'product_genre'=>$data['product_genre'],
+                'product_pegi'=>$data['product_pegi'],'description'=>$data['description'],
                 'price'=>$data['price'],'stock'=>$data['stock'],'feature_item'=>$feature_item,
                 'image'=>$filename]);
             return redirect('/admin/view-products')->with('flash_message_success','Product has been updates successfully!');
@@ -130,6 +136,7 @@ class ProductsController extends Controller
 
         //Get Product Details
         $productDetails = Product::where(['id'=>$id])->first();
+
         //Categories drop down start
         $categories = Category::where(['parent_id'=>0])->get();
         $categories_dropdown = "<option selected disabled></option>";
@@ -251,10 +258,30 @@ class ProductsController extends Controller
             $productsAll = Product::where(function ($query) use($search_product){
                 $query->where('product_name','like','%'.$search_product.'%')->
                 orWhere('product_code','like','%'.$search_product.'%')->
+                orWhere('product_brand','like','%'.$search_product.'%')->
+                orWhere('product_genre','like','%'.$search_product.'%')->
+                orWhere('product_pegi','like','%'.$search_product.'%')->
                 orWhere('description','like','%'.$search_product.'%');
             })->get();
 
 
+
+            return view('products.listing')->with(compact('categories', 'productsAll', 'search_product'));
+        }
+    }
+
+    public function searchProductsPegi(Request $request)
+    {
+        if ($request->isMethod('post')) {
+            $data = $request->all();
+            $categories = Category::with('categories')->where(['parent_id' => 0])->get();
+            $search_product = $data['product'];
+            /*$productsAll = Product::where('product_name', 'like', '%' . $search_product . '%')
+                ->orwhere('product_code', $search_product)->get(); */
+
+            $productsAll = Product::where(function ($query) use($search_product){
+                $query->where('product_pegi','like','%'.$search_product.'%');
+            })->get();
 
             return view('products.listing')->with(compact('categories', 'productsAll', 'search_product'));
         }

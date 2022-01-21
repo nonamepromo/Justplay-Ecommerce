@@ -57,6 +57,36 @@
                                     </div>
                                 </div>
                                 <div class="control-group">
+                                    <label class="control-label">Videogame Brand</label>
+                                    <div class="controls">
+                                        <input type="text" name="product_brand" id="product_brand">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">Videogame Genre</label>
+                                    <div class="controls">
+                                        <select name="product_genre" id="product_genre" style="width: 220px;">
+                                            <option>Avventura</option>
+                                            <option>Azione</option>
+                                            <option>Sport</option>
+                                            <option>Sparatutto</option>
+                                            <option>Simulazione</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">Videogame Pegi</label>
+                                    <div class="controls">
+                                        <select name="product_pegi" id="product_pegi" style="width: 220px;">
+                                            <option>3</option>
+                                            <option>7</option>
+                                            <option>12</option>
+                                            <option>16</option>
+                                            <option>18</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="control-group">
                                     <label class="control-label">Description</label>
                                     <div class="controls">
                                         <textarea name="description" id="description"></textarea>

@@ -57,6 +57,76 @@
                                     </div>
                                 </div>
                                 <div class="control-group">
+                                    <label class="control-label">Videogame Brand</label>
+                                    <div class="controls">
+                                        <input type="text" name="product_brand" id="product_brand" value="{{ $productDetails->product_brand }}">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">Videogame Genre</label>
+                                    <div class="controls">
+                                        <select name="product_genre" id="product_genre" style="width: 220px;">
+                                            @if($productDetails->product_genre == "Avventura")
+                                                <option selected>Avventura</option>
+                                            @else
+                                                <option>Avventura</option>
+                                            @endif
+                                            @if($productDetails->product_genre == "Azione")
+                                                <option selected>Azione</option>
+                                            @else
+                                                <option>Azione</option>
+                                            @endif
+                                            @if($productDetails->product_genre == "Sport")
+                                                <option selected>Sport</option>
+                                            @else
+                                                <option>Sport</option>
+                                            @endif
+                                            @if($productDetails->product_genre == "Sparatutto")
+                                                <option selected>Sparatutto</option>
+                                            @else
+                                                <option>Sparatutto</option>
+                                            @endif
+                                            @if($productDetails->product_genre == "Simulazione")
+                                                <option selected>Simulazione</option>
+                                            @else
+                                                <option>Simulazione</option>
+                                            @endif
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">Videogame Pegi</label>
+                                    <div class="controls">
+                                        <select name="product_pegi" id="product_pegi" style="width: 220px;">
+                                            @if($productDetails->product_pegi == "3")
+                                                <option selected>3</option>
+                                            @else
+                                                <option>3</option>
+                                            @endif
+                                            @if($productDetails->product_pegi == "7")
+                                                <option selected>7</option>
+                                            @else
+                                                <option>7</option>
+                                            @endif
+                                            @if($productDetails->product_pegi == "12")
+                                                <option selected>12</option>
+                                            @else
+                                                <option>12</option>
+                                            @endif
+                                            @if($productDetails->product_pegi == "16")
+                                                <option selected>16</option>
+                                            @else
+                                                <option>16</option>
+                                            @endif
+                                            @if($productDetails->product_pegi == "18")
+                                                <option selected>18</option>
+                                            @else
+                                                <option>18</option>
+                                            @endif
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="control-group">
                                     <label class="control-label">Description</label>
                                     <div class="controls">
                                         <textarea name="description" id="description">{{ $productDetails->description }}</textarea>
