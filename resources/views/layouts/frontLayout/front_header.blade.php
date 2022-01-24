@@ -45,7 +45,7 @@ $cartCount = Product::cartCount();
 
 
             <!-- Logo -->
-            <div class="logo"> <a href="{{ asset('/') }}"><img class="img-responsive" src="{{asset ('images/frontend_images/logo4.png')}}" alt="" ></a> </div>
+            <div class="logo"> <a href="{{ asset('/') }}"><img style="margin-left: -20px" class="img-responsive" src="{{asset ('images/frontend_images/logo4.png')}}" alt="" ></a> </div>
             <nav class="navbar ownmenu">
                 <!-- NAV -->
 

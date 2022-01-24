@@ -1,5 +1,5 @@
 <!-- News Letter -->
-<section class="news-letter style-2 padding-top-100 padding-bottom-100">
+<section class="news-letter style-2 padding-top-1\\\0 padding-bottom-50">
     <div class="container">
         <div class="heading light-head text-center margin-bottom-30">
             <h4>NEWSLETTER</h4>
@@ -22,8 +22,7 @@
         <!-- ABOUT Location -->
         <div class="col-md-3">
             <div class="about-footer"> <img class="margin-bottom-30" src="{{ asset ('images/frontend_images/logo3.png') }}" alt="" >
-                <p><i class="icon-pointer"></i> Jagiellońska 74, 03-301 Warszawa,  <br>
-                    Polonia.</p>
+                <p><i class="icon-pointer"></i> Pescara 65100, Abruzzo.</p>
                 <p><i class="icon-call-end"></i> +48225196900</p>
                 <p><i class="icon-envelope"></i> media@cdprojektred.com</p>
             </div>
